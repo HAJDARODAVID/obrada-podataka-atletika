@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DisciplineController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,7 +36,8 @@ require __DIR__.'/auth.php';
  */
 Route::prefix('admin')
 ->group(function(){
-    Route::get('/', function(){
-        return "Hello admin";
+    Route::controller(DisciplineController::class)
+    ->group(function(){
+        Route::get('/discipline', 'index');
     });
 });

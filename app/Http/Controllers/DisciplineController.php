@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class DisciplineController extends Controller
 {
     public function index(){
-        return 'Hello discipline';
+        return view('discipline');
     }
 }
