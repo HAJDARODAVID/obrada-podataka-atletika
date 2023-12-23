@@ -10,7 +10,7 @@ class TypeCategoryModel extends Model
     use HasFactory;
 
     protected $table = 'type_category';
-    protected $timestamp = false;
+    public $timestamps = false;
 
     protected $fillable = [
         'type',
