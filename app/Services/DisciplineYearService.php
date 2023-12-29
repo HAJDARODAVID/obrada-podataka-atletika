@@ -41,7 +41,10 @@ class DisciplineYearService
     private static function updateTable($dp, $year){
         $table = self::getDisciplineYearRow($dp, $year);
         if(is_null($table)){
-            dd('fuck');
+            DisciplineYearModel::create([
+                'discipline_id' => $dp,
+                'year_id' => $year,
+            ]);
         }else{
             $table->delete();
         }

@@ -19,18 +19,12 @@
             {{$discKey}}
           </th>
           @foreach($disc as $key => $dp)
-          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-            <input type="checkbox" name="" id="{{$key}}" wire:model.live='discipline.{{$discKey}}.{{$key}}.value' @if($dp['value']) {{ 'checked' }} @endif>
-            {{$dp['value']}}
-          </td>
-            
+            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+              <input type="checkbox" name="" id="{{$key}}" wire:model.live='discipline.{{$discKey}}.{{$key}}.value' @if($dp['value']) {{ 'checked' }} @endif>
+            </td>        
           @endforeach
-          
         </tr>
-          
-        @endforeach
-        
-        
+        @endforeach     
       </tbody>
 
     </table>
