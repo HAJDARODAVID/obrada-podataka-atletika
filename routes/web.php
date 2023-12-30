@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApplicationFormController;
 use App\Http\Controllers\DisciplineController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -40,4 +41,12 @@ Route::prefix('admin')
     ->group(function(){
         Route::get('/discipline', 'index');
     });
+});
+
+/**
+ * User routes
+ */
+Route::controller(ApplicationFormController::class)
+->group(function(){
+    Route::get('application', 'index');
 });
